@@ -32,31 +32,31 @@ const config = defineConfig({
     mdx(),
     sitemap(),
     spectre({
-      name: 'Spectre',
+      name: "Spectre",
       openGraph: {
         home: {
-          title: 'Spectre',
-          description: 'A minimalistic theme for Astro.'
+          title: "Spectre",
+          description: "A minimalistic theme for Astro.",
         },
         blog: {
-          title: 'Blog',
-          description: 'News and guides for Spectre.'
+          title: "Blog",
+          description: "News and guides for Spectre.",
         },
         projects: {
-          title: 'Projects'
-        }
+          title: "Projects",
+        },
       },
       giscus: {
-        repository: GISCUS_REPO,
-        repositoryId: GISCUS_REPO_ID,
-        category: GISCUS_CATEGORY,
-        categoryId: GISCUS_CATEGORY_ID,
-        mapping: GISCUS_MAPPING as any,
-        strict: GISCUS_STRICT === "true",
-        reactionsEnabled: GISCUS_REACTIONS_ENABLED === "true",
-        emitMetadata: GISCUS_EMIT_METADATA === "true",
-        lang: GISCUS_LANG,
-      }
+        repository: GISCUS_REPO || "Paul1404/astro-spectre",
+        repositoryId: GISCUS_REPO_ID || "R_kgDOP03HBA",
+        category: GISCUS_CATEGORY || "General",
+        categoryId: GISCUS_CATEGORY_ID || "DIC_kwDOP03HBM4CvxDh",
+        mapping: (GISCUS_MAPPING as any) || "pathname",
+        strict: GISCUS_STRICT === "true" || false,
+        reactionsEnabled: GISCUS_REACTIONS_ENABLED === "true" || true,
+        emitMetadata: GISCUS_EMIT_METADATA === "true" || false,
+        lang: GISCUS_LANG || "en",
+      },
     })
   ],
   adapter: node({
